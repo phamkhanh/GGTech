@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20181129154401_Init.cs" />
+    <Compile Remove="Migrations\20181129160802_Init.cs" />
+    <Compile Remove="Migrations\20181129160915_Init.cs" />
+    <Compile Remove="Migrations\20181129161018_Init.cs" />
+    <Compile Remove="Migrations\20181129161135_Init.cs" />
+    <Compile Remove="Migrations\20181129161211_Init.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GGTech.Commons\GGTech.Commons.csproj" />
+    <ProjectReference Include="..\GGTech.Domain.Data\GGTech.Domain.Data.csproj" />
+    <ProjectReference Include="..\GGTech.Infrastructure\GGTech.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
